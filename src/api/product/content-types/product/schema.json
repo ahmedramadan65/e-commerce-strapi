@@ -26,9 +26,23 @@
     },
     "category": {
       "type": "relation",
-      "relation": "oneToOne",
+      "relation": "manyToOne",
       "target": "api::category.category",
-      "inversedBy": "product"
+      "inversedBy": "products"
+    },
+    "description": {
+      "type": "text",
+      "required": true,
+      "maxLength": 1000,
+      "minLength": 3
+    },
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
     }
   }
 }

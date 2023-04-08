@@ -4,7 +4,8 @@
   "info": {
     "singularName": "category",
     "pluralName": "categories",
-    "displayName": "Category"
+    "displayName": "Category",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
@@ -18,16 +19,9 @@
       "maxLength": 100,
       "minLength": 3
     },
-    "slug": {
-      "type": "string",
-      "required": true,
-      "unique": true,
-      "maxLength": 100,
-      "minLength": 3
-    },
-    "product": {
+    "products": {
       "type": "relation",
-      "relation": "oneToOne",
+      "relation": "oneToMany",
       "target": "api::product.product",
       "mappedBy": "category"
     }
